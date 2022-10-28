@@ -19,7 +19,7 @@ The toy has 5 audio 'slots'. Each slot can store around 40 seconds of audio. The
 For the demo to work, you must be within Bluetooth range of the device (around 10m). I shouldn't have to tell you that you must only connect to a CloudPet toy that you own. Connecting to someone else's one is illegal, so don't do that.
 
 ## Live Demo
-There's a cut-down [live demo](https://pdjstone.github.io/cloudpets-web-bluetooth/index.html) that can upload and play some pre-recorded audio. The demo doesn't have the server-side component to do the encoding and decoding. But it can upload a couple of pre-encoded clips. It can also trigger the recording (and play it back on the toy itself), and control the LED.
+There's a cut-down [live demo](https://barstarred.github.io/cloudpets-web-bluetooth/index.html) that can upload and play some pre-recorded audio. The demo doesn't have the server-side component to do the encoding and decoding. But it can upload a couple of pre-encoded clips. It can also trigger the recording (and play it back on the toy itself), and control the LED.
 
 ## Python Server
 The audio encoding/decoding functionality is done using a small Python Flask server. It uses ctypes to call into two native ARM libraries taken from the CloudPets APK to compress and decompress the audio. Since the libraries are native Android ARM binaries, the best place to run the server is on an Android device. You'll need to extract the libraries youself from the CloudPets APK and place them into the libs directory. I recommend using the excellent [Termux](https://termux.com/) Android app.
