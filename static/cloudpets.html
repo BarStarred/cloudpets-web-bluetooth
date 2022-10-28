@@ -76,7 +76,7 @@ progress { width: 100%; display:none}
  <button onclick="sendRecordCommand(3)">Record with toy mic (slot 1)</button>
  <button onclick="sendRecordCommand(4)">Record with toy mic (slot 1)</button>
      <button onclick="sendRecordCommand(5)">Record with toy mic (slot 1)</button>
-    
+    <br>
   <button onclick="sendRecvAudioCommand()">Fetch Recording</button>
  
   <button onclick="startDownloadPlayback()" id="play-rec-button">Play</button>
@@ -561,6 +561,7 @@ function sendPlayCommand(slot) {
 async function sendRecordCommand() {
   try {
     var recCmd = new Uint8Array([8, 2]);
+    log('recCmd =' +recCmd;
     chars.cmd.writeValue(recCmd);
   } catch (e) {
     log('Argh! ' + e);
