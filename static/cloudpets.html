@@ -560,9 +560,9 @@ function sendPlayCommand(slot) {
   }
 }
 
-async function sendRecordCommand() {
+async function sendRecordCommand(slot) {
   try {
-    var recCmd = new Uint8Array([8, 2, 2]);
+    var recCmd = new Uint8Array([8, 2, slot]);
     log('recCmd =' +recCmd);
     chars.cmd.writeValue(recCmd);
   } catch (e) {
