@@ -109,6 +109,7 @@ Volume <input id="volume-slider" type="range" min="0" max="255" onchange="setVol
 
 <script>
 
+var version = 0.1;
 var device;
 var is_connected = false;
 var current_play_slot = 0;
@@ -692,6 +693,7 @@ recButton.addEventListener('mousedown', startRecord);
 recButton.addEventListener('touchend', endRecord);
 recButton.addEventListener('mouseup', endRecord);
 makePlayButtons();
+log('Version: '+version)
 </script>
 </body>
 </html>
