@@ -73,11 +73,11 @@ progress { width: 100%; display:none}
 <div class='row'>
   Record with toy mic, to Slot: 
     <br>
-    <button onclick="sendRecordCommand(1)">1</button>
-    <button onclick="sendRecordCommand(2)">2</button>
-    <button onclick="sendRecordCommand(3)">3</button>
-    <button onclick="sendRecordCommand(4)">4</button>
-    <button onclick="sendRecordCommand(5)">5</button>
+    <button onclick="sendRecordCommand(01)">1</button>
+    <button onclick="sendRecordCommand(02)">2</button>
+    <button onclick="sendRecordCommand(03)">3</button>
+    <button onclick="sendRecordCommand(04)">4</button>
+    <button onclick="sendRecordCommand(05)">5</button>
     <br>
   <button onclick="sendRecvAudioCommand()">Fetch Recording</button>
  
@@ -109,7 +109,7 @@ Volume <input id="volume-slider" type="range" min="0" max="255" onchange="setVol
 
 <script>
 
-var version = 0.1;
+var version = 0.3;
 var device;
 var is_connected = false;
 var current_play_slot = 0;
